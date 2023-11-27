@@ -1,0 +1,22 @@
+body {
+    background-color: darkgray;
+    margin: auto;
+}
+
+/* Banner */
+.banner {
+    background-color: #000000;
+}
+
+.banner_content {
+    display: flex;
+    .banner_img {
+        width: 160px;
+        height: auto;
+    }
+    .banner_text {
+        font-size: 40px;
+        color: #ffffff;
+        margin: auto 0px;
+    }
+}
