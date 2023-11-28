@@ -21,27 +21,14 @@
         <div class="search_content">
             <!-- Search box -->
             <div class="search_box">
-                <input type="text" placeholder="Search..">
+                <input id="search" type="text" placeholder="Search.." />
+                <input type="submit" onClick="return search(document.getElementById('search').value);">
             </div>
 
             <hr>
             <!-- Search results -->
-            <div class="search_result">
-                <div class="result">
-                    <img src="../img/square.png"> 
-                    <div class="result_content">
-                        <p class="result_name"> Music nice</p>
-                        <p class="result_author"> Nice music</p>
-                    </div>
-                </div>
-                <div class="result">
-                    <img src="../img/square.png"> 
-                    <div class="result_content">
-                        <p class="result_name"> Music nice</p>
-                        <p class="result_author"> Nice music</p>
-                    </div>
-                </div>
-                <!-- script -->
+            <div id="search_result" class="search_result">
+                <script src="../script/search.js"></script>
             </div>
         </div>
     </div>

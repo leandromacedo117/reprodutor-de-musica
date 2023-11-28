@@ -39,7 +39,14 @@ body {
 }
 .result {
     display: flex;
-}
-.result {
-
+    .result_img {
+        width: 100px;
+        height: auto;
+    }
+    .result_name {
+        font-size: 20px;
+    }
+    .result_author {
+        font-size: 14px;
+    }
 }
