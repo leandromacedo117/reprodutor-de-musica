@@ -32,7 +32,9 @@ function cardBuilder(value) {
     p_name.innerHTML = musicas[value][0];
     p_author.innerHTML = musicas[value][1];
     img.setAttribute('src', '../img/square.png');
-    a_result.setAttribute('href', "../pages/index.html")
+    a_result.setAttribute('href', "../pages/music.html");
+    a_result.setAttribute('data-internalid', value);
+    a_result.setAttribute('onClick', 'changePage(this)');
 
     // Setando classes:
     img.setAttribute('class', 'result_img');
@@ -51,4 +53,14 @@ function cardBuilder(value) {
     
     // Executando:
     document.getElementById("search_result").appendChild(a_result);
+}
+
+function changePage(element) {
+    localStorage.setItem('music_value', element.getAttribute("data-internalid"));
+}
+
+function musicPage() {
+    var value = localStorage.getItem('music_value');
+    document.getElementById("music_name").innerHTML = musicas[value][0];
+    console.log(value);
 }
