@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/musica.jpg");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+main{
+    min-height: 850px;
+    min-width: 850px;
+    background-color: #000;
+    opacity: 0.8;
+    border-radius: 40px;
+}
+
+
+.banner {
+    background-color: #000000;
+}
+
+.banner_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+    .banner_img {
+        width: 20   0px;
+        height: auto;
+    }
+}
+
+.banner_text{
+    font-size: 3rem;
+   
+}
+
+.login-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-content{
+    padding: 40px;
+}
+
+h2{
+    padding-bottom: 40px;
+    font-size: 2.4rem;
+}
