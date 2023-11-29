@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style/login.css">
+    <script src="../script/login.js" defer></script>
 </head>
-<body>
+<body onload="clicks()">
     <main>
         <div class="container">
            
@@ -21,14 +22,15 @@
                 <div class="login-content">
                    <h2>Login</h2> 
                   <div class="content">
-                    <h3 >Name</h3>
+                    <h3 >Name:</h3>
                     <input id="name" type="text" placeholder="informe qual é seu nome">
 
-                    <h3>email</h3>
-                    <input  id="email" type="text" placeholder="ex: exemplo@gmai.com">
+                    <h3>email:</h3>
+                    <input  id="email" type="text" placeholder="exemplo@gmai.com">
 
-                    <h3>Senha</h3>
-                    <input type="password" >
+                    <h3>Senha:</h3>
+                    <input type="password" placeholder="Informe sua senha">
+                    <div class="button-enter"><button class="button"><a href="../pages/index.html">Entra</a></button></div>
                   </div>
                 </div>
             </div> 
