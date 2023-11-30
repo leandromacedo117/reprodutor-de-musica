@@ -21,8 +21,10 @@
         <div class="search_content">
             <!-- Search box -->
             <div class="search_box">
-                <input id="search" type="text" placeholder="Search.." />
-                <input type="submit" onClick="return search(document.getElementById('search').value);">
+                <input id="search" class="search_placer" type="text" placeholder="Search.." />
+                <button class="search_button" onClick="return search(document.getElementById('search').value);">
+                    <img src="../img/icone_search.png" width="20px">
+                </button>
             </div>
 
             <hr>
