@@ -19,8 +19,8 @@ body{
 }
 
 main{
-    min-height: 850px;
-    min-width: 850px;
+    min-height: 600px;
+    min-width: 600px;
     background-color: #000;
     opacity: 0.8;
     border-radius: 40px;
@@ -38,13 +38,13 @@ main{
     padding-bottom: 2px;
     border-bottom: 1px solid #fff;
     .banner_img {
-        width: 20   0px;
+        width: 140px;
         height: auto;
     }
 }
 
 .banner_text{
-    font-size: 3rem;
+    font-size: 2rem;
    
 }
 
@@ -59,6 +59,48 @@ main{
 }
 
 h2{
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     font-size: 2.4rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.6rem;
+    font-weight: normal;
+    padding: 10px;
+}
+
+input{
+   padding: 20px;
+   border-radius: 10px;
+   width: 350px;
+   color: #000;
+   font-size: 1rem;
+   font-weight: 200;
+}
+
+.button-enter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    margin-top: 20px;
+    height: 60px;
+    width: 270px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px ;
+    cursor: pointer;
+
+    
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+a{
+    color: #000;
+    font-size: 1.3rem;
 }
