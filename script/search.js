@@ -61,6 +61,6 @@ function changePage(element) {
 
 function musicPage() {
     var value = localStorage.getItem('music_value');
-    document.getElementById("music_name").innerHTML = musicas[value][0];
-    console.log(value);
+    document.getElementById("musicName").innerHTML = musicas[value][0];
+    document.getElementById("musicAuthor").innerHTML = musicas[value][1];
 }

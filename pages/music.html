@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FEELMO</title>
-    <link rel="stylesheet" href="../style/style_main.css">
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="../style/song.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body onload="musicPage()">
-    
-    <div class="main">
 
-        <!-- Banner -->
-        <div class="banner">
-            <div class="banner_content">
-                <img class="banner_img" src="../img/logo.png" alt="logo FEELMO">
-                <p class="banner_text">FEELMO</p>
+    <!-- Banner -->
+    <ul>
+        <li><a href="index.html"><img src="../img/logo.png" alt="logo FEELMO"></a></li>
+        <li><a class="nav_text" href="search.html">MÚSICAS</a></li>
+        <li><a class="nav_text" href="#contact">SOBRE</a></li>
+    </ul>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="main">
+
+            <div class="logo">
+                <img src="../img/Jujutsu Kaisen.webp">
             </div>
-        </div>   
 
-        <!-- Music -->
-        <div class="music">
-            <p id="music_name" class="a"></p>
-            <script src="../script/search.js"></script>
+            <span id="musicName">Music</span>
+            <span id="musicAuthor">MusicAuthor</span>
+
+            <audio id="player" src=""></audio>
+            <div class="controls">
+                <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
+                <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
+                <button id="nextButton"><i class='bx bx-skip-next'></i></button>
+            </div>
+
+            <div class="content-progress">
+                <div class="progress-bar">
+                <div class="progress"></div>
+                </div>
+                <!-- duração da musica -->
+                <div class="time">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+                </div>
+            </div>
         </div>
-
-        
     </div>
-
+    <script type="module" src="script.js"></script>
+    <script src="../script/search.js"></script>
 </body>
 </html>
