@@ -1,11 +1,16 @@
 body {
     background-color: darkgray;
     margin: auto;
+    background-image: url("../img/musica.jpg");
 }
-
+.main {
+  width: 100vw;
+  height: 100vh;
+}
 /* Banner */
 ul {
     list-style-type: none;
+    max-height: 12%;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -34,3 +39,45 @@ ul {
   .nav_text {
     padding: 31px;
   }
+
+/* Content */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 60%;
+  height: 88%;
+  margin: 0% 20%;
+}
+.first_card {
+  background-image: url("../img/card1.jpeg");
+  filter: brightness(50%);
+  background-size: cover;
+  grid-column: 1;
+  grid-row: 1;
+  height: 100%;
+  width: 100%;
+}
+.second_card {
+  background-color: #000000;
+  grid-column: 2;
+  grid-row: 1;
+  height: 100%;
+  width: 100%;
+}
+.third_card {
+  background-color: #000000;
+  grid-column: 1;
+  grid-row: 2;
+  height: 100%;
+  width: 100%;
+}
+.fourth_card {
+  background-image: url("../img/card3.jpeg");
+  filter: brightness(50%);
+  background-size: cover;
+  grid-column: 2;
+  grid-row: 2;
+  height: 100%;
+  width: 100%;
+}
