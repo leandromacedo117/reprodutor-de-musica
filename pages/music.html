@@ -7,7 +7,7 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
-<body onload="musicPage()">
+<body >
 
     <!-- Banner -->
     <ul>
@@ -24,14 +24,14 @@
                 <img src="../img/Jujutsu Kaisen.webp">
             </div>
 
-            <span id="musicName">Music</span>
-            <span id="musicAuthor">MusicAuthor</span>
+            <span id="music-name">Music</span>
+            <span id="music-author"></span>
 
             <audio id="player" src=""></audio>
             <div class="controls">
-                <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
-                <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
-                <button id="nextButton"><i class='bx bx-skip-next'></i></button>
+                <button id="prev-button"><i class='bx bx-skip-previous'></i></button>
+                <button id="play-pause-button"><i class='bx bx-caret-right'></i></button>
+                <button id="next-button"><i class='bx bx-skip-next'></i></button>
             </div>
 
             <div class="content-progress">
@@ -40,13 +40,13 @@
                 </div>
                 <!-- duração da musica -->
                 <div class="time">
-                <span id="currentTime">0:00</span>
+                <span id="current-time">0:00</span>
                 <span id="duration">0:00</span>
                 </div>
             </div>
         </div>
     </div>
-    <script type="module" src="script.js"></script>
-    <script src="../script/search.js"></script>
+    <!-- <script type="module" src="script.js"></script> -->
+    <script type="module" src="../script/song_player.js"></script>
 </body>
 </html>
