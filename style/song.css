@@ -5,26 +5,77 @@
   }
   
   body {
+    background-color: #333;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: sans-serif;
   }
   
+/* Banner */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+li img {
+  width: 70px;
+  height: auto;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.nav_text {
+  padding: 31px;
+}
+
+  /* Content */
+  .content {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    width: auto;
+    height: 88%;
+  }
+  .content:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("../img/Jujutsu\ Kaisen.webp");
+    filter: blur(3px) brightness(80%);
+  }
+
   .main {
+    grid-column: 2;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    max-width: 400px;
-    background-color: #BE3144;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #000000;
     width: 100%;
-    height: 500px;
+    height: 100%;
     margin: 0 10px;
     box-shadow: 0 1px 10px gray;
     padding: 10px;
-    border-radius: 5px;
   }
   
   .logo {
@@ -37,21 +88,22 @@
     border-radius: 5px;
   }
   
-  .logo i {
-    font-size: 200px;
+  .logo {
+    width: 350px;
+    height: 350px;
+  }
+  .logo img{
+    width: 100%;
+    height: 100%;
   }
   
   #musicName {
-    white-space: nowrap; 
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 30px;
   }
   
   .controls button {
     border: none;
-    background-color: #BE3144;
+    background-color: #000000;
     cursor: pointer;
   }
   

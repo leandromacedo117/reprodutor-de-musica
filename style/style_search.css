@@ -3,23 +3,36 @@ body {
 }
 
 /* Banner */
-.banner {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: #000000;
-}
-
-.banner_content {
-    display: flex;
-    .banner_img {
-        width: 160px;
-        height: auto;
-    }
-    .banner_text {
-        font-size: 40px;
-        color: #ffffff;
-        margin: auto 0px;
-    }
-}
-
+  }
+  li img {
+    width: 70px;
+    height: auto;
+  }
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  .nav_text {
+    padding: 31px;
+  }
 /* Search */
 .search {
     background-image: url("../img/musica.jpg");
@@ -50,8 +63,8 @@ body {
 .search_button {
     margin: 5px 5px 0px 0px;
     width: 40px;
-    height: 32px;
-    border: 1px solid #f24718;
+    height: 31px;
+    border: 3px solid #f24718;
     background: #f24718;
     text-align: center;
     color: #fff;
