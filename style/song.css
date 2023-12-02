@@ -137,7 +137,7 @@ li a:hover:not(.active) {
   
   .progress-bar {
     height: 8px;
-    background-color: #ddd;
+    background-color: #d62424;
     cursor: pointer;
     margin-bottom: 5px;
     border-radius: 5px;
