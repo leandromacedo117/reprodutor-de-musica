@@ -1,76 +1,104 @@
-import songs from "./music.js"
+let music = [
+  {
+    src :"../songs/jujutsu.mp3",
+    name : " JUJUTSU KAISEN - Opening | kaikai kitan ",
+    author : "Eve",
+    img : "../img/jujutsuKaisen.jpg",
+  },
 
+  {
+    src : "../songs/kali uchis - telepatía (slowed n reverb)(MP3_160K).mp3",
+    name : " Leno Brega - Trepada em Cuiabá ",
+    author: "tes",
+    img : "../img/jujutsuKaisen.jpg",
+  },
+]
 
-const prevButton = document.querySelector("#prev-button")
-const playPauseButton = document.querySelector("#play-pause-button")
-const nextButton = document.querySelector("#next-button")
+let index = 0
+const audio = document.querySelector("audio")
+const playButton = document.querySelector(".play-button")
+const pauseButton = document.querySelector(".pause-button")
 
-const player = document.querySelector("#player")
-const duration = document.querySelector("#duration")
-const musicName = document.querySelector("#music-name")
-const currentTime = document.querySelector("#current-time")
-const progressBar = document.querySelector("#progress-bar")
-const progress = document.querySelector("#progress")
+let imagem = document.querySelector("img")
+let nameMusic = document.querySelector(" .description h2")
+let nameAuthor = document.querySelector(" .description i") 
+// Event 
 
-const textButtonPlay = "<i class='bx bx-caret-right'></i>";
-const textButtonPause = "<i class='bx bx-pause'></i>";
+let duraationMusic = document.querySelector(".end")
+duraationMusic.textContent = segundsforMinutes(Math.floor(audio.duration))
 
+// tocar Musica
+playButton.addEventListener("click", function() {
+  playMusic()
+  playButton.classList.toggle("hide")
+  pauseButton.classList.toggle("hide")
+  
+})
 
-let index = 0;
+// pausar musica
+pauseButton.addEventListener("click" , function(){
+  pauseMusic()
+  pauseButton.classList.toggle("hide")
+  playButton.classList.toggle("hide")
+})
 
-prevButton.onclick = () => nextMusic("prev");
-nextButton.onclick = () => nextMusic();
+audio.addEventListener("timeupdate", updateBar)
 
-playPauseButton.onclick = () => playPause();
-
-
-const playPause = () => {
-  if (player.paused) {
-    player.play();
-    playPauseButton.innerHTML = textButtonPause;
-  } else {
-    player.pause();
-    playPauseButton.innerHTML = textButtonPlay;
+document.querySelector(".prev").addEventListener("click", () => {
+  index--
+  if(index < 0){
+    index = 14
   }
-};
+  renderizarMusic(index)
+  playMusic()
+})
 
-player.ontimeupdate = () => updateTime();
+document.querySelector(".next").addEventListener("click", () => {
+  index++
+  if(index > 15) {
+    index = 0
+  }
+  renderizarMusic(index)
+  playMusic()
+  
+})
 
-const updateTime = () =>{
-  const currentMinutes = Math.floor(player.currentTime / 60);
-  const currentSeconds = Math.floor(player.currentTime % 60);
-  currentTime.textContent = currentMinutes + ":" + formatZero(currentSeconds);
-
-  const durationFormatted = isNaN(player.duration) ? 0 : player.duration;
-  const durationMinutes = Math.floor(durationFormatted / 60);
-  const durationSeconds = Math.floor(durationFormatted % 60);
-  duration.textContent = durationMinutes + ":" + formatZero(durationSeconds);
-
-  const progressWidth = durationFormatted
-    ? (player.currentTime / durationFormatted) * 100
-    : 0;
-
-  progress.style.width = progressWidth + "%";
+// functions
+function renderizarMusic(indexPosition){
+  audio.setAttribute('src' ,music[indexPosition].src)
+  audio.addEventListener("loadeddata" , () =>{
+    nameMusic.textContent = music[indexPosition].name
+    nameAuthor.textContent = music[indexPosition].author
+    imagem.src = music[indexPosition].img
+    duraationMusic.textContent = segundsforMinutes(Math.floor(audio.duration))
+  })
 }
 
-// zerar index
- const formatZero = (num) =>(num < 15 ? "0" + num : num)
- 
+const playMusic = () =>{
+  audio.play()
+}
 
-const nextMusic = (type = "next") => {
-  if ((type == "next" && index + 1 === songs.length) || type === "init") {
-    index = 0;
-  } else if (type == "prev" && index === 0) {
-    index = songs.length;
-  } else {
-    index = type === "prev" && index ? index - 1 : index + 1;
+const pauseMusic = () =>{
+  audio.pause()
+}
+
+// carregando Barra...
+function updateBar(){
+  let bar = document.querySelector("progress")
+  bar.style.width = Math.floor((audio.currentTime / audio.duration) * 100) + '%'
+  let currentTimes = document.querySelector(".init")
+  currentTimes.textContent = segundsforMinutes(Math.floor(audio.currentTime))
+}
+
+function segundsforMinutes(segundos){
+  let minutes = Math.floor(segundos / 60)
+  let segunds = segundos % 60
+
+  if(segunds < 10 ){
+    segunds =  '0' +segunds
   }
 
-  player.src = songs[index].src;
-  musicName.innerHTML = songs[index].name;
-  if (type !== "init") playPause();
+  return minutes+ ':' +segunds
+}
 
-   updateTime();
-};
 
-nextMusic("init");
