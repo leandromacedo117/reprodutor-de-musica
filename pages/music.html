@@ -1,52 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Music Player</title>
-  <link rel="stylesheet" href="../style/song.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/song.css">
+    <title>Projeto Player Spotify</title>
 </head>
-<body >
-
-    <!-- Banner -->
-    <ul>
-        <li><a href="index.html"><img src="../img/logo.png" alt="logo FEELMO"></a></li>
-        <li><a class="nav_text" href="search.html">MÚSICAS</a></li>
-        <li><a class="nav_text" href="#contact">SOBRE</a></li>
-    </ul>
-
-    <!-- Content -->
-    <div class="content">
-        <div class="main">
-
-            <div class="logo">
-                <img src="../img/Jujutsu Kaisen.webp">
-            </div>
-
-            <span id="music-name">Music</span>
-            <span id="music-author"></span>
-
-            <audio id="player" src=""></audio>
-            <div class="controls">
-                <button id="prev-button"><i class='bx bx-skip-previous'></i></button>
-                <button id="play-pause-button"><i class='bx bx-caret-right'></i></button>
-                <button id="next-button"><i class='bx bx-skip-next'></i></button>
-            </div>
-
-            <div class="content-progress">
-                <div class="progress-bar">
-                <div class="progress"></div>
-                </div>
-                <!-- duração da musica -->
-                <div class="time">
-                <span id="current-time">0:00</span>
-                <span id="duration">0:00</span>
-                </div>
-            </div>
+<body>
+    <div class="context">
+    <img src="../img/Jujutsu Kaisen.webp">
+    <div class="description">
+        <h2>JUJUTSU KAISEN - Opening | kaikai kitan </h2>
+        <i>Eve</i>
+    </div>
+    <div class="duration">
+        <div class="bar">
+            <progress value="0" max="1"></progress>
+            <div class="ponto"></div>
+        </div>
+        <div class="time">
+            <p class="init">0:00</p>
+            <p class="end">0:00</p>
         </div>
     </div>
-    <!-- <script type="module" src="script.js"></script> -->
+    <div class="player">
+        <i class="fas fa-step-backward setas prev"></i>
+        <i class="fas fa-play-circle play-button"></i>
+        <i class="fas fa-pause-circle pause-button hide" ></i>
+        <i class="fas fa-step-forward setas next"></i>
+    </div>
+    <audio src="../songs/jujutsu.mp3"></audio>
     <script type="module" src="../script/song_player.js"></script>
 </body>
 </html>
