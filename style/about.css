@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'BF';
+    src: url('Black Future.otf') format('opentype');
+}
+body {
+    background-color: darkgray;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* Banner */
+.banner {
+    background-color: #000000;
+}
+.banner_content {
+    display: flex;
+    .banner_img {
+        width: 160px;
+        height: auto;
+    }
+    .banner_text {
+        font-size: 40px;
+        color: #ffffff;
+        margin: auto 0px;
+        font-family: BF;
+    }
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#000000;
+    display: flex;
+    justify-content: left;
+    font-family: BF;
+    font-size: 120%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 40px;
+    text-decoration: none;
+  }
+  
+  
+  li a:hover {
+    background-color: #333;
+  }
+  .row1{
+    display: flex;
+    margin-top: 50px;
+  }
+  .row2{
+    display: flex;
+    margin: 0%;
+  }
+  .colum1{
+    width: 50%;
+    height: 400px;
+    background-color: #000000;
+  }
+  #text1{
+    text-align: left;
+    color: white;
+    font-size: 160%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 15px;
+  }
+ .colum2{
+    width:50%;
+    height:400px;
+    background-image: url(../img/IMG_20231204_145030.jpg);
+    background-size:100% 400px;
+ }
+ .colum3{
+    width: 50%;
+    background-color:darkgray;
+    border: 0;
+    margin-top: 50px;
+    font-size: 130%;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    .colum3_text{
+        font-size: 135%;
+        
+    }
+
+ }
+ #text2{
+    color: #000000;
+    text-align: center;
+    font-size: 140%;
+ }
+ #gmail{
+    text-align: left;
+    margin-left: 15px;
+    font-size: 120%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding: 15px 0 15px 15px;
+ }
+ #gitHub{
+    text-align: right;
+    margin-right: 15px;
+    font-size: 120%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+ }
+ .colum4{
+    width: 50%;
+    margin-top:20px;
+    .colum4_img{
+        margin-left: 180px;
+        width: 400px;
+        height: 200px;
+    }
+ }
+ #text4{
+    font-size: 1.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top:  0px;
+    text-align: center;
+    text-decoration: solid;
+    font-weight: 900;
+ }
+
+

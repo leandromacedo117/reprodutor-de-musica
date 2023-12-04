@@ -1,4 +1,8 @@
-body, html {
+@font-face {
+  font-family: 'BF';
+  src: url('Black Future.otf') format('opentype');
+}
+main {
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,6 +13,53 @@ body, html {
   background-color: #333;
   color: #ddd;
   font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Banner */
+.banner {
+  background-color: #000000;
+}
+.banner_content {
+  display: flex;
+  .banner_img {
+      width: 160px;
+      height: auto;
+  }
+  .banner_text {
+      font-size: 40px;
+      color: #ffffff;
+      margin: auto 0px;
+      font-family: BF;
+  }
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#000000;
+  display: flex;
+  justify-content: left;
+  font-family: BF;
+  font-size: 120%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 40px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #333;
 }
 
 img {
