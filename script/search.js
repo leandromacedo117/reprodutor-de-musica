@@ -1,9 +1,9 @@
 var musicas = {
-    1: ["Skyfall", "Adele"],
-    2: ["Empty Bed", "Adele"],
-    3: ["Por Supuesto", "Adele"],
-    4: ["Cachimbo da paz", "Marina Sena"],
-    5: ["Me deixa", "Marina Sena"]
+    1: ["Skyfall", "Adele", "../songs/jujutsu.mp3", "../img/jujutsuKaisen.jpg"],
+    2: ["Empty Bed", "Adele", "../songs/kali uchis - telepatía (slowed n reverb)(MP3_160K).mp3", "../img/jujutsuKaisen.jpg"],
+    3: ["Por Supuesto", "Adele", "../songs/jujutsu.mp3", "../img/jujutsuKaisen.jpg"],
+    4: ["Cachimbo da paz", "Marina Sena", "../songs/jujutsu.mp3", "../img/jujutsuKaisen.jpg"],
+    5: ["Me deixa", "Marina Sena", "../songs/jujutsu.mp3", "../img/jujutsuKaisen.jpg"]
 };
 
 function search(searched) {  
@@ -60,7 +60,102 @@ function changePage(element) {
 }
 
 function musicPage() {
-    var value = localStorage.getItem('music_value');
-    document.getElementById("musicName").innerHTML = musicas[value][0];
-    document.getElementById("musicAuthor").innerHTML = musicas[value][1];
+
+    let index = localStorage.getItem('music_value');
+
+        const audio = document.querySelector("audio")
+        const playButton = document.querySelector(".play-button")
+        const pauseButton = document.querySelector(".pause-button")
+
+        renderizarMusic(index)
+
+        let imagem = document.querySelector("img")
+        let nameMusic = document.querySelector(" .description h2")
+        let nameAuthor = document.querySelector(" .description i") 
+        // Event 
+
+        let duraationMusic = document.querySelector(".end")
+        duraationMusic.textContent = segundsforMinutes(Math.floor(audio.duration))
+
+        updateBar()
+
+        // tocar Musica
+        playButton.addEventListener("click", function() {
+        playMusic()
+        playButton.classList.toggle("hide")
+        pauseButton.classList.toggle("hide")
+        
+        })
+
+        // pausar musica
+        pauseButton.addEventListener("click" , function(){
+        pauseMusic()
+        pauseButton.classList.toggle("hide")
+        playButton.classList.toggle("hide")
+        })
+
+        audio.addEventListener("timeupdate", updateBar)
+
+        document.querySelector(".prev").addEventListener("click", () => {
+        index--
+        if(index < 0){
+            index = 14
+        }
+        renderizarMusic(index)
+        playMusic()
+        })
+
+        document.querySelector(".next").addEventListener("click", () => {
+        index++
+        if(index > 15) {
+            index = 0
+        }
+        renderizarMusic(index)
+        playMusic()
+        
+        })
+
+        // functions
+        function renderizarMusic(indexPosition){
+            audio.setAttribute('src' , musicas[indexPosition][2])
+            document.getElementById("musicName").innerHTML = musicas[indexPosition][0];
+            document.getElementById("musicAuthor").innerHTML = musicas[indexPosition][1];
+            document.getElementById("songImg").innerHTML = musicas[indexPosition][3];
+            audio.addEventListener("loadeddata" , () =>{
+            // nameMusic.textContent = music[indexPosition].name
+            // nameAuthor.textContent = music[indexPosition].author
+            // imagem.src = music[indexPosition].img
+            duraationMusic.textContent = segundsforMinutes(Math.floor(audio.duration))
+        })
+        }
+
+        const playMusic = () =>{
+        audio.play()
+        }
+
+        const pauseMusic = () =>{
+        audio.pause()
+        }
+
+        // carregando Barra...
+        function updateBar(){
+            let bar = document.querySelector("progress")
+            bar.style.width = Math.floor((audio.currentTime / audio.duration) * 100) + '%'
+            let currentTimes = document.querySelector(".init")
+            currentTimes.textContent = segundsforMinutes(Math.floor(audio.currentTime))
+        }
+
+        function segundsforMinutes(segundos){
+            let minutes = Math.floor(segundos / 60)
+            let segunds = segundos % 60
+
+        if(segunds < 10 ){
+            segunds =  '0' +segunds
+        }
+
+        return minutes+ ':' +segunds
+        }
+
+
+
 }
