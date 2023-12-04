@@ -7,7 +7,7 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
-<body >
+<body onload="musicPage()">
 
     <!-- Banner -->
     <ul>
@@ -24,7 +24,7 @@
                 <img src="../img/Jujutsu Kaisen.webp">
             </div>
 
-            <span id="music-name">Music</span>
+            <span id="music-name"></span>
             <span id="music-author"></span>
 
             <audio id="player" src=""></audio>
@@ -48,5 +48,6 @@
     </div>
     <!-- <script type="module" src="script.js"></script> -->
     <script type="module" src="../script/song_player.js"></script>
+    <script src="../script/search.js"></script>
 </body>
 </html>
