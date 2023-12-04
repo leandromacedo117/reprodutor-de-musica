@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="../style/song.css">
     <title>FEELMO</title>
 </head>
-<body>
+<body onload="musicPage()">
     <div class="context">
-    <img src="../img/Jujutsu Kaisen.webp">
+    <img id="songImg" src="../img/Jujutsu Kaisen.webp">
     <div class="description">
-        <h2>JUJUTSU KAISEN - Opening | kaikai kitan </h2>
-        <i>Eve</i>
+        <h2 id="musicName"></h2>
+        <i id="musicAuthor"></i>
     </div>
     <div class="duration">
         <div class="bar">
@@ -35,6 +35,7 @@
         <i class="fas fa-step-forward setas next"></i>
     </div>
     <audio src="../songs/jujutsu.mp3"></audio>
-    <script type="module" src="../script/song_player.js"></script>
+    <!-- <script type="module" src="../script/song_player.js"></script> -->
+    <script src="../script/search.js"></script>
 </body>
 </html>
