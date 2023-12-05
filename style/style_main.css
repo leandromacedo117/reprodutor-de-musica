@@ -1,172 +1,106 @@
 @font-face {
-    font-family: 'BF';
-    src: url('Black Future.otf') format('opentype');
+  font-family: 'BF';
+  src: url('Black Future.otf') format('opentype');
 }
-
-body {
-    background-color: darkgray;
-    margin: auto;
-    font-family:BF;
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  color: #fff;
 }
-
 /* Banner */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #000000;
+.banner {
+  background-color: #000000;
 }
-
 .banner_content {
-    display: flex;
-    .banner_img {
-        width: 160px;
-        height: auto;
-    }
-    .banner_text {
-        font-size: 40px;
-        color: #ffffff;
-        margin: auto 0px;
-    }
+  display: flex;
+  .banner_img {
+      width: 160px;
+      height: auto;
+  }
+  .banner_text {
+      font-size: 40px;
+      color: #ffffff;
+      margin: auto 0px;
+      font-family: BF;
+  }
 }
-  /* barra de navegação*/
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color:#000000;
+  display: flex;
+  justify-content: left;
+  font-family: BF;
+  font-size: 25px;
 }
 
 li {
   float: left;
 }
-
 li a {
   display: block;
+  font-size: 20px;
   color: white;
   text-align: center;
   padding: 20px 40px;
   text-decoration: none;
+  font-size: 25px;
 }
 
+li a:hover:not(.active) {
+  background-color: #111;
+  font-size: 25px
+}
 
 li a:hover {
   background-color: #333;
 }
 
-  /* Parte principal da página*/
-
-.row1{
+main{
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/fundoIndex.jpg");
+}
+.content{
+  min-height: 100vh;
+  min-width: 100%;
   display: flex;
-  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
 }
-.row2{
-  display: flex;
-  margin: 0%;
-}
+
+main::before{
+
+  min-height: 600px;
+  min-width: 600px;
+  background-color: #000;
+  opacity:1.9;
 
   
-
-.colum1{
-    background-image: url(../img/pessoa1site.jpg);
-    width: 50%;
-    background-size: 100% 500px;
-    height: 500px;
-    grid-row:1;
-    
 }
 
-#text1{
-  position: absolute;
-  font-size: 230%;
-  color: white;
-  margin: 70px 0 0 50px;
-  font-family:BF;
+.content-text{
+  padding: 120px;
+  border-radius: 60px;
+  opacity: .7;
+  font-weight: bold;
+  font-size: 2.4rem;
+  background-color: #000;
+  font-family: BF;
+}
+
+
+  li img {
+    width: 70px;
+    height: auto;
+  }
   
-}
-
-.colum2{
-  background-color: #000000;
-  width: 50%;
-  height: 500px;
-  grid-row: 1;
-  float:right;
-  border-bottom:#AA0303 2px;
-  .colum2_img{
-    width: 200px;
-    height: 200px;
-    margin: 10px 0 500px 490px;
-    
+  .nav_text {
+    padding: 31px;
   }
-}
-#text2{
-  color: white;
-  font-size: 230%;
-  text-align: center;
-  margin-top: 100px;
-  font-family:BF;
-  border-bottom:#AA0303 80px;
-  
-}
-  .colum3{
-    width: 50%;
-    background-color:black;
-    height: 500px;
-    background-size: 100% 500px;
-    .colum3_img{
-      width: 200px;
-      height: 200px;
-    }
-    
-    
-  }
-  #text3{
-    font-size: 230%;
-    color: white;
-    margin: 70px 0 0 50px;
-    font-family:BF;
-    text-align: center;
-    margin-right: 40px;
-  }
-  .colum4{
-    background-image: url(../img/pessoasite2.jpg);
-    background-size: 100% 500px;
-    width: 50%;
-    height: 500px;
-    float:left;
-  }
-  #text4{
-    color: white;
-    font-size: 230%;
-    text-align: right;
-    margin-top: 70px;
-    font-family:BF;
-    border-bottom:#AA0303 2px;
-    margin-right: 50px;
-  }
-  .botao{
-    font-family: BF;
-    justify-self: left;
-    border-radius: 15px;
-    border: solid #AA0303;
-    width: 160px;
-    height: 80px;
-    background-color:#AA0303;
-    color: white;
-    margin-left: 285px;
-    margin-top: 20px;
-    
-  }
-  a{
-    text-decoration: none;
-    font-size: 150%;
-    color: white;
-    
-  }
-   
-   
-
-
 

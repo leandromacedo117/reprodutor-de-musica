@@ -1,38 +1,62 @@
+@font-face {
+  font-family: 'BF';
+  src: url('Black Future.otf') format('opentype');
+}
 body {
-    margin: auto;
+  background-color: darkgray;
+  margin: auto;
+}
+a{
+  text-decoration: none;
+  color: #000;
 }
 
 /* Banner */
+.banner {
+  background-color: #000000;
+}
+.banner_content {
+  display: flex;
+  .banner_img {
+      width: 160px;
+      height: auto;
+  }
+  .banner_text {
+      font-size: 40px;
+      color: #ffffff;
+      margin: auto 0px;
+      font-family: BF;
+  }
+}
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #000000;
-  }
-  li img {
-    width: 70px;
-    height: auto;
-  }
-  li {
-    float: left;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#000000;
+  display: flex;
+  justify-content: left;
+  font-family: BF;
+  font-size: 25px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 40px;
+  text-decoration: none;
   
-  li a {
-    display: block;
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #111;
-  }
-  .nav_text {
-    padding: 31px;
-  }
+}
+
+
+li a:hover {
+  background-color: #333;
+}
 /* Search */
 .search {
     background-image: url("../img/musica.jpg");
@@ -45,6 +69,7 @@ ul {
     width: 100%;
     position: relative;
     display: flex;
+    margin-top: 15px;
 }
 .search_placer {
     margin: 5px 0px 5px 5px;
@@ -77,6 +102,9 @@ ul {
 .search_content {
     background-color: rgb(0, 0, 0);
     grid-column: 2;
+    height: 600px;
+    border-radius: 20px;
+    margin-top: 15px;
 }
 .search_result {
     margin-left: 10px;
