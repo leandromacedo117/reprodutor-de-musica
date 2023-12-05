@@ -3,7 +3,7 @@
   src: url('Black Future.otf') format('opentype');
 }
 body {
-  background-color: darkgray;
+  background-image: url("../img/musica.jpg");
   margin: auto;
 }
 a{
@@ -100,9 +100,11 @@ li a:hover {
 
 /* search result */
 .search_content {
-    background-color: rgb(0, 0, 0);
+    background-image: url(../img/fundoNotas.jpg);
+    background-size: cover;
     grid-column: 2;
-    height: 600px;
+    min-height: 600px;
+    height:fit-content;
     border-radius: 20px;
     margin-top: 15px;
 }
