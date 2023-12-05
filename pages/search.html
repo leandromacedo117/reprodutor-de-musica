@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEELMO</title>
+    <link rel="stylesheet" href="../style/style_search.css">
+</head>
+<body>
+    
+    <!-- Banner -->
+    <ul>
+        <li><a href="index.html"><img src="../img/logo.png" alt="logo FEELMO"></a></li>
+        <li><a class="nav_text" href="search.html">MÚSICAS</a></li>
+        <li><a class="nav_text" href="#contact">SOBRE</a></li>
+    </ul>
+
+    <!-- Search area -->
+    <div class="search">
+        <div class="search_content">
+            <!-- Search box -->
+            <div class="search_box">
+                <input id="search" class="search_placer" type="text" placeholder="Search.." />
+                <button class="search_button" onClick="return search(document.getElementById('search').value);">
+                    <img src="../img/icone_search.png" width="20px">
+                </button>
+            </div>
+
+            <hr>
+            <!-- Search results -->
+            <div id="search_result" class="search_result">
+                <!-- <a href="#" onClick="changePage(this)" data-internalid="1">a</a> -->
+                <script src="../script/search.js"></script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

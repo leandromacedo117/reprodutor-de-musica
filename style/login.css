@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/musica.jpg");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+main{
+    min-height: 600px;
+    min-width: 600px;
+    background-color: #000;
+    opacity: 0.8;
+    border-radius: 40px;
+}
+
+
+.banner {
+    background-color: #000000;
+}
+
+.banner_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+    .banner_img {
+        width: 140px;
+        height: auto;
+    }
+}
+
+.banner_text{
+    font-size: 2rem;
+   
+}
+
+.login-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-content{
+    padding: 40px;
+}
+
+h2{
+    padding-bottom: 20px;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.6rem;
+    font-weight: normal;
+    padding: 10px;
+}
+
+input{
+   padding: 20px;
+   border-radius: 10px;
+   width: 350px;
+   color: #000;
+   font-size: 1rem;
+   font-weight: 200;
+}
+
+.button-enter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    margin-top: 20px;
+    height: 60px;
+    width: 270px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px ;
+    cursor: pointer;
+
+    
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+a{
+    color: #000;
+    font-size: 1.3rem;
+}

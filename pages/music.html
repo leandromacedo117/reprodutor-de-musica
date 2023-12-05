@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/song.css">
+    <title>FEELMO</title>
+</head>
+<body onload="musicPage()">
+    <div class="context">
+    <img id="songImg" src="../img/Jujutsu Kaisen.webp">
+    <div class="description">
+        <h2 id="musicName"></h2>
+        <i id="musicAuthor"></i>
+    </div>
+    <div class="duration">
+        <div class="bar">
+            <progress value="0" max="1"></progress>
+            <div class="ponto"></div>
+        </div>
+        <div class="time">
+            <p class="init">0:00</p>
+            <p class="end">0:00</p>
+        </div>
+    </div>
+    <div class="player">
+        <i class="fas fa-step-backward setas prev"></i>
+        <i class="fas fa-play-circle play-button"></i>
+        <i class="fas fa-pause-circle pause-button hide" ></i>
+        <i class="fas fa-step-forward setas next"></i>
+    </div>
+    <audio src="../songs/jujutsu.mp3"></audio>
+    <!-- <script type="module" src="../script/song_player.js"></script> -->
+    <script src="../script/search.js"></script>
+</body>
+</html>
