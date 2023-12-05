@@ -10,6 +10,7 @@
   box-sizing: border-box;
   color: #fff;
 }
+/* Banner */
 .banner {
   background-color: #000000;
 }
@@ -35,21 +36,26 @@ ul {
   display: flex;
   justify-content: left;
   font-family: BF;
-  font-size: 120%;
+  font-size: 25px;
 }
 
 li {
   float: left;
 }
-
 li a {
   display: block;
+  font-size: 20px;
   color: white;
   text-align: center;
   padding: 20px 40px;
   text-decoration: none;
+  font-size: 25px;
 }
 
+li a:hover:not(.active) {
+  background-color: #111;
+  font-size: 25px
+}
 
 li a:hover {
   background-color: #333;
@@ -89,37 +95,11 @@ main::before{
 }
 
 
-
-
-/* Banner */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #000000;
-    
-  }
   li img {
     width: 70px;
     height: auto;
   }
-  li {
-    float: left;
-  }
   
-  li a {
-    display: block;
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #111;
-  }
   .nav_text {
     padding: 31px;
   }
