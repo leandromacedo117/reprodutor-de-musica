@@ -6,7 +6,7 @@ var musicas = {
     5: ["Trepada Em Cuiabá", "Leno Brega", "../songs/Trepada em Cuiabá.mp3", "../img/5.jpg"],
     6: ["Chop Suey", "System Of A Down", "../songs/Chop Suey!.mp3", "../img/6.jpg"],
     7: ["Cupid", "FIFTY FIFTY", "../songs/Cupid.mp3", "../img/7.jpg"],
-    8: ["Dimble", "BTS", "../songs/Dimble.mp3", "../img/8.jpg"],
+    8: ["Dimple", "BTS", "../songs/Dimple.mp3", "../img/8.jpg"],
     9: ["DNA", "BTS", "../songs/DNA.mp3", "../img/9.jpg"],
     10: ["Euphoria", "BTS", "../songs/Euphoria.mp3", "../img/10.jpg"],
     11: ["Evidências", "Chitãozinho E Xororó", "../songs/Evidências.mp3", "../img/11.jpg"],
