@@ -10,6 +10,8 @@ main {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: linear-gradient(to right, #000, #343434);
+  background-image: linear-gradient(to right,#000, #413F42);
   background-color: #333;
   color: #ddd;
   font-family: 'Montserrat', sans-serif;

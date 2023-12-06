@@ -15,7 +15,7 @@ export default [
 
     // {
     //     src :
-    //     name : "That's  What I Live - Bruno Mars ",
+    //     name : "That's  What I Like - Bruno Mars ",
     // },
 
     // {

@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../style/main.css">
 </head>
-<body>
+<body onload="boaVindas()">
     <div class="main">
         <div class="banner">
             <div class="banner_content">
@@ -23,6 +23,11 @@
         <li><a href="main.html">MENU</a></li>
 
     </ul>
+    <div class="text">
+    <div class="boa-vinda">Seja bem vindo <span id="boa-vindas"></span></div>
+        
+    </div>
+
     <!--Parte principal da página-->
     <div class="row1">
         <div class="colum1"> 
@@ -36,7 +41,7 @@
         </div>
         <div class="colum2">
             <p id="text2">Acesse os nossos serviços e<br>
-                 ouça músicas de forma gratuíta
+                 ouça músicas de forma gratuita
             </p>
             <button class="botao"><a href="search.html">Ouça agora</a></button>
         </div>
@@ -60,6 +65,6 @@
             </p>
         </div>
     </div>
-    
+    <script src="../script/login.js"></script>
 </body>
 </html>

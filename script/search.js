@@ -77,6 +77,7 @@ function changePage(element) {
 }
 
 function musicPage() {
+    
 
     let index = localStorage.getItem('music_value');
 
@@ -115,10 +116,12 @@ function musicPage() {
 
         document.querySelector(".prev").addEventListener("click", () => {
         index--
+        
         if(index < 0){
             index = 21
             playButton.classList.toggle("hide")
             pauseButton.classList.toggle("hide")
+
              
         }
         renderizarMusic(index)
@@ -127,10 +130,11 @@ function musicPage() {
 
         document.querySelector(".next").addEventListener("click", () => {
         index++
+        
         if(index > 22) {
             index = 0
             playButton.classList.toggle("hide")
-            pauseButton.classList.toggle("hide")
+            pauseButton.classList.toggle("hide")            
 
         }
         renderizarMusic(index)

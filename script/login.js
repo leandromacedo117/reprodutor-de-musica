@@ -46,6 +46,7 @@ function boaVindas(){
     const contextLocal = localStorage.getItem("context")
     const boaVindas = document.querySelector("#boa-vindas")
     boaVindas.textContent = contextLocal
+    console.log(boaVindas)
     
    
 }
